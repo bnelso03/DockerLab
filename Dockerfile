@@ -7,4 +7,4 @@ RUN zypper install -y mariadb && \
 
 COPY init.sql /init.sql
 
-CMD ["sh", "-c", "mysqld --datadir=/var/lib/mysql & mysql -u root < /init.sql"]
+CMD ["sh", "-c", "mysqld --user=root --datadir=/var/lib/mysql & sleep 5 && mysql -u root < /init.sql"]
