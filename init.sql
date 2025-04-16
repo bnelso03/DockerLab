@@ -1,7 +1,10 @@
+CREATE DATABASE IF NOT EXISTS StudentDB;
+USE StudentDB
+
 CREATE TABLE Students (
 	studentID int,
 	lastName varchar(255),
-	lirstName varchar(255)
+	firstName varchar(255)
 );
 
 INSERT INTO Students VALUES (1, "Diaz", "Andrew");
